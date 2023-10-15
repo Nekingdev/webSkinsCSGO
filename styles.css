@@ -1,0 +1,138 @@
+/* Estilos generales */
+@font-face {
+    font-family: 'fuenteBlackOps'; /* Asigna un nombre a tu fuente */
+    src: url('fuentes/BlackOpsOne-Regular.ttf') format('woff');
+    /* Agrega otros formatos si es necesario (como .ttf o .otf) */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-image: url(imagenes/fondo.jpg);
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Barra de navegación */
+/* Estilos para la barra de navegación */
+nav {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    margin-top: -20px;
+    height: 50px; /* Ajusta la altura según tus preferencias */
+}
+
+/* Estilos para los elementos de la lista de navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos de la lista */
+    justify-content: center; /* Centra horizontalmente los elementos de la lista */
+    height: 100%; /* Ajusta la altura para que los elementos ocupen toda la altura de la barra */
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav a {
+    font-family: 'fuenteBlackOps';
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Otros estilos para la barra de navegación y contenido principal... */
+
+
+/* Contenido principal */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección de Skins Destacadas */
+.destacado {
+    
+    text-align: center;
+    margin-top: 20px;
+    background-color: transparent !important; /* Establece el fondo como transparente */
+    padding: 0; /* Quita el relleno para que no haya espacio adicional */
+}
+
+.destacado h2 {
+    font-family: 'fuenteBlackOps';
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/* Sección de Categorías */
+.categorias {
+    margin-top: 20px;
+    background-color: transparent !important; /* Establece el fondo como transparente */
+}
+
+.categorias h2 {
+    font-family: 'fuenteBlackOps';
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.categoria {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.boton-arma {
+    font-family: 'fuenteBlackOps';
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Transiciones suaves */
+    margin: 0 1%;
+}
+
+/* Establece un margen derecho nulo para el último botón */
+.boton-arma:last-child {
+    margin-right: 0;
+}
+
+/* Efecto al pasar el puntero (sombra y escala) */
+.boton-arma:hover {
+    transform: scale(1.05); /* Escalar el botón al 105% */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 8); /* Agregar una sombra */
+}
+
+
+.boton-arma h3 {
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.boton-arma:hover {
+    background-color: #f9f9f9;
+}
+
