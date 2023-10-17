@@ -1,0 +1,10 @@
+{
+  "type": "module",
+  "dependencies": {
+    "axios": "^0.26.0"
+  },
+  "scripts": {
+    "update-data": "node update.js",
+    "group-data": "node group.js"
+  }
+}
