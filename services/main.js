@@ -1,28 +1,12 @@
-// Esta es la función para cargar los datos de las skins desde tu fuente de datos
-function loadSkinsFromAPI() {
-    // Realiza la solicitud para obtener los datos de las skins (puedes usar fetch o axios)
-    // Cuando obtengas los datos, llama a renderSkins para mostrarlos.
-    fetch('skins.json')
-        .then((response) => response.json())
-        .then((skinsData) => {
-            // Llama a la función renderSkins con los datos de las skins
-            renderSkins(skinsData);
-        })
-        .catch((error) => {
-            console.error('Error al cargar los datos de las skins:', error);
-        });
-}
-
 // Esta es la función para mostrar las skins en la página
-function renderSkins(skinsData) {
+function renderSkins(skinsData, category) {
     const skinsList = document.querySelector('.skins-list');
-
-    // Filtra las skins solo para la categoría "Pistolas"
-    const pistolSkins = skinsData.filter((skin) => skin.category.name === "Pistolas");
     
+    // Filtra las skins por categoría
+    const filteredSkins = skinsData.filter((skin) => skin.category.name === category);
 
-    // Recorre las skins de pistolas y genera el HTML para cada una
-    pistolSkins.forEach((skin) => {
+    // Recorre las skins y genera el HTML para cada una
+    filteredSkins.forEach((skin) => {
         const skinItem = document.createElement('div');
         skinItem.classList.add('skin-item');
 
@@ -50,7 +34,3 @@ function renderSkins(skinsData) {
     });
 }
 
-// Llama a la función para cargar los datos de las skins al cargar la página
-window.addEventListener('load', () => {
-    loadSkinsFromAPI();
-});
