@@ -235,9 +235,30 @@ function renderRandomSkins(randomSkins) {
   });
 }
 
-// Llama a la función para cargar skins aleatorias al cargar la página
-window.addEventListener('load', () => {
-  loadRandomSkinsFromAPI();
+
+
+//---------------------------buscador------------------------------
+
+
+// Agrega un evento de escucha al botón de búsqueda
+searchButton.addEventListener('click', () => {
+  const searchText = searchInput.value.toLowerCase();
+
+  // Filtra las skins y busca una coincidencia exacta en el nombre
+  const filteredSkins = skinsData.filter((skin) => {
+      return skin.name.toLowerCase() === searchText;
+  });
+
+  // Limpia la lista actual
+  skinsList.innerHTML = '';
+
+  // Renderiza la skin filtrada (si se encontró una coincidencia)
+  if (filteredSkins.length > 0) {
+      renderSkins(filteredSkins);
+  } else {
+      // Si no se encuentra una coincidencia, puedes mostrar un mensaje de "No se encontraron resultados".
+      skinsList.innerHTML = '<p>No se encontraron resultados.</p>';
+  }
 });
 
 
