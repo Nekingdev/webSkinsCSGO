@@ -82,6 +82,7 @@ main {
 
 /* Sección de Categorías */
 .categorias {
+    
     margin-top: 20px;
     background-color: transparent !important; /* Establece el fondo como transparente */
 }
@@ -93,6 +94,7 @@ main {
 }
 
 .categoria {
+    margin: 12px;
     display: inline-block;
     margin-right: 20px;
 }
@@ -137,6 +139,7 @@ main {
 }
 
 .textoPistolas{
+    font-family: 'fuenteBlackOps';
     background-color: #f9f9f9;
 
 }
@@ -172,3 +175,23 @@ body {
 }
 
 /* Agrega más estilos según tus preferencias */
+/* Estilo para los nombres de los agentes */
+.agents-list h3 {
+    color: white; /* Cambia el color del texto a blanco */
+}
+
+/* Estilo para la descripción de los agentes */
+.agents-list p {
+    color: white; /* Cambia el color del texto a blanco */
+}
+
+/* Agrega más estilos según tus preferencias */
+/* Estilo para los nombres de los agentes */
+.stickers-list h3 {
+    color: white; /* Cambia el color del texto a blanco */
+}
+
+/* Estilo para la descripción de los agentes */
+.stickers-list p {
+    color: transparent; /* Cambia el color del texto a blanco */
+}
