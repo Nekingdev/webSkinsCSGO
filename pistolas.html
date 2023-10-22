@@ -37,6 +37,55 @@
         <p> 2023 Skins CS 2 - Desarrollado por NekoDev - Todos los derechos reservados.</p>
     </footer>
 
-    
+
+
+<!-- Agrega una lupa (un elemento div) oculta por defecto -->
+<div id="magnifier" style="display: none;"></div>
+
+
+    <div id="popup" class="popup">
+        <img id="popup-image" src="" alt="Skin grande">
+    </div>
+    <script>
+        const skinsList = document.querySelector('.skins-list');
+const popup = document.getElementById('popup');
+const popupImage = document.getElementById('popup-image');
+const magnifier = document.getElementById('magnifier');
+
+skinsList.addEventListener('click', (event) => {
+    if (event.target.tagName === 'IMG') {
+        const clickedImage = event.target;
+        const largeImageUrl = clickedImage.src; // Proporciona la URL de la imagen grande
+
+        popupImage.src = largeImageUrl;
+        popup.style.display = 'block';
+
+        // Mostrar la lupa y configurar su imagen
+        magnifier.style.display = 'block';
+        magnifier.style.backgroundImage = `url(${largeImageUrl})`;
+
+        // Cambiar la posición de la lupa con el cursor del mouse
+        magnifier.style.backgroundSize = 'auto';
+        magnifier.style.backgroundRepeat = 'no-repeat';
+
+        skinsList.addEventListener('mousemove', (e) => {
+            const rect = clickedImage.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const bgPosX = x * 2 - 100; // Ajusta estos valores según tu preferencia
+            const bgPosY = y * 2 - 100; // Ajusta estos valores según tu preferencia
+
+            magnifier.style.backgroundPosition = `${bgPosX}px ${bgPosY}px`;
+        });
+    }
+});
+
+popup.addEventListener('click', () => {
+    popup.style.display = 'none';
+    magnifier.style.display = 'none';
+});
+
+    </script>
 </body>
 </html>
