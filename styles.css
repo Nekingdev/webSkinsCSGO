@@ -277,3 +277,21 @@ body {
     font-size: 70px; 
     font-family: 'fuenteBlackOps';
 }
+
+/* Estilos para la tabla de información del jugador */
+.info-table {
+    width: 100%;
+    border-collapse: collapse; /* Elimina el espacio entre las celdas */
+}
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #000; /* Línea superior */
+}
+.info-row td {
+    padding: 10px; /* Espaciado interno */
+}
+.info-row .header {
+    font-weight: bold; /* Texto en negrita */
+    background-color: #ff3232; /* Fondo de color para las celdas de encabezado */
+}
