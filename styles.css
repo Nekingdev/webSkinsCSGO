@@ -1,3 +1,66 @@
+
+/* Estilos generales para PC */
+
+/* ... (otros estilos) ... */
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 768px) {
+    /* Estilos para dispositivos móviles */
+
+    /* Cambia el tamaño de fuente para dispositivos móviles */
+    body {
+        font-size: 16px;
+    }
+
+    /* Ajusta los estilos para la barra de navegación en dispositivos móviles */
+    nav {
+        height: 80px; /* Ajusta la altura para dispositivos móviles */
+        font-size: 14px; /* Reduce el tamaño de fuente para dispositivos móviles */
+    }
+
+    /* Modifica los estilos de botones o elementos específicos en dispositivos móviles */
+    .boton-arma {
+        width: 150px; /* Cambia el tamaño de los botones de arma para dispositivos móviles */
+    }
+
+    /* Personaliza otros estilos para dispositivos móviles según tus necesidades */
+
+    /* Ajusta el ancho del contenido principal */
+    main {
+        max-width: 100%;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    /* Estilos específicos para la sección de Categorías */
+    .categorias {
+        margin-top: 10px;
+    }
+
+    .categoria {
+        margin: 6px;
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Personaliza otros estilos para dispositivos móviles según tus necesidades */
+
+    /* Estilos para el pie de página en dispositivos móviles */
+    footer {
+        padding: 5px;
+    }
+
+    /* Ajusta estilos para la tabla de información del jugador en dispositivos móviles */
+    .info-table {
+        font-size: 12px;
+    }
+
+    /* Estilos para otros elementos específicos en dispositivos móviles */
+
+    /* Personaliza otros estilos para dispositivos móviles según tus necesidades */
+}
+
+
 /* Estilos generales */
 @font-face {
     font-family: 'fuenteBlackOps'; /* Asigna un nombre a tu fuente */
