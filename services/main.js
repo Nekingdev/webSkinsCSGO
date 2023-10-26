@@ -1,4 +1,10 @@
+
+
+// Resto de tu código...
+
+
 // Esta es la función para cargar los datos de las skins desde tu fuente de datos
+
 function loadSkinsFromJSON(category) {
     fetch('skins.json') // Reemplaza 'skins.json' con la ruta correcta a tu archivo JSON
       .then((response) => response.json())
@@ -239,28 +245,70 @@ function renderRandomSkins(randomSkins) {
 
 //---------------------------buscador------------------------------
 
+// Define una variable para almacenar los datos de las skins
+let skinsData = [];
 
-// Agrega un evento de escucha al botón de búsqueda
-searchButton.addEventListener('click', () => {
-  const searchText = searchInput.value.toLowerCase();
+// Función para mostrar las skins basadas en la búsqueda
+function mostrarSkinsCoincidentes(query) {
+    const skinsList = document.querySelector('.skins-list');
+    // Elimina las skins existentes antes de agregar las nuevas
+    skinsList.innerHTML = '';
 
-  // Filtra las skins y busca una coincidencia exacta en el nombre
-  const filteredSkins = skinsData.filter((skin) => {
-      return skin.name.toLowerCase() === searchText;
-  });
+    // Filtra las skins que coinciden con la búsqueda
+    const skinsCoincidentes = skinsData.filter(skin => skin.name.toLowerCase().includes(query.toLowerCase()));
 
-  // Limpia la lista actual
-  skinsList.innerHTML = '';
+    // Recorre las skins coincidentes y crea elementos para mostrarlas
+    skinsCoincidentes.forEach(skin => {
+        const skinElement = document.createElement('div');
+        skinElement.classList.add('skin-item');
 
-  // Renderiza la skin filtrada (si se encontró una coincidencia)
-  if (filteredSkins.length > 0) {
-      renderSkins(filteredSkins);
-  } else {
-      // Si no se encuentra una coincidencia, puedes mostrar un mensaje de "No se encontraron resultados".
-      skinsList.innerHTML = '<p>No se encontraron resultados.</p>';
-  }
-});
+        // Construye la ruta de la imagen relativa
+const imageName = `${skin.weapon.id}_${skin.pattern.id}_light.png`;
+const imagePath = `public/images/econ/default_generated/${imageName}`;
+
+// Agrega la imagen de la skin
+const skinImage = document.createElement('img');
+skinImage.src = imagePath;
 
 
-  
+        const skinName = document.createElement('p');
+        skinName.textContent = skin.name;
+
+        skinElement.appendChild(skinImage);
+        skinElement.appendChild(skinName);
+        skinsList.appendChild(skinElement);
+    });
+}
+
+// Cargar los datos de las skins desde el archivo skins.json
+fetch('skins.json')
+    .then((response) => response.json())
+    .then((data) => {
+        // Almacena los datos de las skins en la variable skinsData
+        skinsData = data;
+
+        // Manejar el evento de clic en el botón de búsqueda
+        const searchButton = document.getElementById('search-button');
+        searchButton.addEventListener('click', () => {
+            const searchInput = document.getElementById('search-input');
+            const query = searchInput.value;
+            mostrarSkinsCoincidentes(query);
+        });
+
+        // También puedes manejar la búsqueda cuando se presiona Enter en el campo de búsqueda
+        const searchInput = document.getElementById('search-input');
+        searchInput.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                const query = searchInput.value;
+                mostrarSkinsCoincidentes(query,categoryId);
+            }
+        });
+    })
+    .catch((error) => {
+        console.error('Error al cargar los datos de las skins:', error);
+    });
+
+
+
+
 
