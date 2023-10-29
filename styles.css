@@ -96,6 +96,8 @@ nav {
 }
 
 /* Estilos para los elementos de la lista de navegación */
+/* Estilos para la lista no ordenada (ul) */
+/* Estilos para la lista no ordenada (ul) */
 nav ul {
     list-style: none;
     padding: 0;
@@ -105,15 +107,33 @@ nav ul {
     height: 100%; /* Ajusta la altura para que los elementos ocupen toda la altura de la barra */
 }
 
+/* Estilos para los elementos de la lista (li) */
 nav ul li {
     margin-right: 20px;
+    transition: transform 0.2s; /* Agregamos una transición para suavizar el efecto */
 }
 
+/* Estilos para los enlaces (a) dentro de los elementos de la lista */
 nav a {
     font-family: 'fuenteBlackOps';
     text-decoration: none;
     color: #fff;
 }
+
+/* Estilos cuando se pasa el cursor sobre los elementos de la lista */
+nav ul li:hover {
+    transform: scale(1.1); /* Escala el elemento al 110% en hover */
+    transition: transform 0.2s; /* Agrega una transición para suavizar el efecto de escala */
+}
+
+/* Otros estilos de hover que quieras aplicar a los enlaces (a) */
+nav a:hover {
+    /* Aquí puedes aplicar estilos adicionales, como cambiar el color o el fondo */
+    color: #ff5733; /* Cambia el color del texto en hover */
+    background-color: #333; /* Cambia el color de fondo en hover */
+    border-radius: 5px; /* Agrega bordes redondeados en hover, si lo deseas */
+}
+
 
 /* Otros estilos para la barra de navegación y contenido principal... */
 
