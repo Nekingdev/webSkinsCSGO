@@ -17,6 +17,7 @@
         height: 80px; /* Ajusta la altura para dispositivos móviles */
         font-size: 14px; /* Reduce el tamaño de fuente para dispositivos móviles */
     }
+    
 
     /* Modifica los estilos de botones o elementos específicos en dispositivos móviles */
     .boton-arma {
@@ -59,7 +60,15 @@
 
     /* Personaliza otros estilos para dispositivos móviles según tus necesidades */
 }
-
+.redes-sociales{
+    width: 30px;
+    height: 30px;
+}
+nav ul li.redes-sociales {
+    float: right;
+    margin-right: 10px;
+     /* Elimina el margen derecho para el último elemento */
+}
 
 /* Estilos generales */
 @font-face {
@@ -152,7 +161,7 @@ main {
 .destacado {
     
     text-align: center;
-    margin-top: 20px;
+    margin-top: 60px;
     background-color: transparent !important; /* Establece el fondo como transparente */
     padding: 0; /* Quita el relleno para que no haya espacio adicional */
 }
@@ -377,4 +386,47 @@ body {
 .info-row .header {
     font-weight: bold; /* Texto en negrita */
     background-color: #ff3232; /* Fondo de color para las celdas de encabezado */
+}
+
+.division-con-fondo-oscuro {
+    margin-top: 40px;
+    background-color: #333; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: space-between; /* Espacio entre los elementos */
+    padding: 10px; /* Espaciado interno */
+    font-family: 'fuenteblackops';
+    border-radius: 30px;
+}
+
+.icono-inicio,
+.icono-fin {
+    width: 50px; /* Ajusta el ancho según tus preferencias */
+    height: 50px; /* Ajusta la altura según tus preferencias */
+}
+
+.icono-inicio {
+    margin-right: 10px; /* Espacio entre la imagen de inicio y el texto */
+}
+
+.icono-fin {
+    margin-left: 10px; /* Espacio entre el texto y la imagen de fin */
+}
+.actualizaciones {
+    margin-top: 40px;
+    background-color: #333; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    padding: 10px; /* Espaciado interno */
+    font-family: 'fuenteblackops';
+    border-radius: 30px;
+    text-align: center;
+}
+.skins-destacadas {
+    display: flex;
+    flex-direction: row-reverse; /* Muestra las skins de derecha a izquierda */
+    gap: 20px; /* Ajusta el espacio entre las skins según tus preferencias */
 }
