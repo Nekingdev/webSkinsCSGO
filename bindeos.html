@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentes - Skins-cs2</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace a tu archivo CSS para el estilo -->
+    <script src="services/main.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="/mirillas.html">Mirillas</a></li>
+            <li><a href="/lineups.html">Lineups</a></li>
+            <li><a href="/builds.html">Builds de Skins</a></li>
+            <li><a href="/colecciones.html">colecciones</a></li>
+            <li><a href="/bindeos.html">Bindeos</a></li>
+            <li class="redes-sociales"><a href=""><img style="width: 30px; height: 30px;"  src="imagenes/tiktok_logo_icon_188431.png" alt="tiktok"></a></li>
+            <li class="redes-sociales"><a href="https://twitter.com/Skins_Cs2"><img style="width: 30px; height: 30px;" src="imagenes/social-twitter-icon_34350.png" alt="twitter"></a></li>
+            
+        </ul>
+        
+    </nav>
+
+    <header>
+        <h1 class="CROSSHAIR">BINDEOS</h1>
+        <h3 style="color: #FFFF;">En este apartado tienes los mejores bindeos de cs2</h3>
+
+    </header>
+
+<h2  style="color: #FFFF; font-size: 60px; font-family: fuenteblackops; text-align: center; margin-top: 40px;" >Bindeos basicos</h2>
+<div
+ style="background-color: rgb(0, 0, 0);
+  width: 50%; height: 50%;   width: 50%; 
+margin: auto;
+border: 1px solid #ccc; 
+padding: 20px;">
+<pre style="color: #FFFF; font-size: 20px; font-family: fuenteblackops;" >
+    // mute unmute game
+    bind F1 "toggle volume"
+    
+    // mute unmute team
+    bind F2 "toggle voice_modenable"
+    
+    // noclip
+    bind F3 "sv_cheats 1; noclip"
+    
+    // tirar ultima granada
+    bind F5 "sv_rethrow_last_grenade"
+    
+    // saltar con el ratón y espacio
+    bind "mwheeldown" +jump; bind "mwheelup" +jump; bind "space" +jump
+    
+    // quitar sangre, no funciona
+    bind F cl_removedecals
+    
+    // acelerar tiempo
+    bind F6 "host_timescale 5"
+    
+    // reestablecer tiempo
+    bind F7 "host_timescale 1"
+    
+    // quitar humos 
+    bind F8 "ent_fire smokegrenade_projectile kill; stopsound"
+    </pre>
+</div>
+
+<h1 class="CROSSHAIR">Jumpthrow</h1>
+        <h3 style="color: #FFFF; text-align: center;">Como crear el Jumpthrow para cs2</h3>
+<div style="background-color: rgb(0, 0, 0);
+width: 50%; height: 50%;   width: 50%; 
+margin: auto;
+border: 1px solid #ccc; 
+padding: 20px;">
+<pre style="color: #FFFF; font-size: 20px; font-family: fuenteblackops;">
+<pre  style="color: #FFFF; font-size: 20px; font-family: fuenteblackops;">
+    1) crear jumpthrow.cfg en C:\Program Files (x86)\Steam\steamapps\common\
+    Counter-Strike Global Offensive\game\csgo\cfg ( ruta del juego donde lo tengas) 
+
+    2) pegar las siguientes 4 lineas en jumpthrow.cfg y guardar
+    -attack
+    -attack2
+    +jump
+    -jump
+
+    3) abrir juego y escribir en consola
+    bind ALT "exec jumpthrow"
+</pre>
+</div>
+
+<div style="height: 80%; width: 80%; margin-left: 10%; margin-top: 80px;" id="disqus_thread"></div>
+    <script>
+        
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://skinshunters.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <footer>
+        <p>2023 Mirillas - CS:GO - Desarrollado por NekoDev - Todos los derechos reservados.</p>
+    </footer>
+    <script id="dsq-count-scr" src="//skinshunters.disqus.com/count.js" async></script>
+</body>
+</html>

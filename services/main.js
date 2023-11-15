@@ -313,3 +313,45 @@ fetch('skins.json')
 
 
 //----------------------------builds---------------------------------
+// Función para mostrar las skins contenidas en una caja de llaves
+function showSkinsInKey(key) {
+  const keyContainer = document.querySelector('.key-container');
+  const skinsContainer = document.querySelector('.skins-container');
+
+  // Muestra la imagen de la caja de llaves y su nombre
+  keyContainer.querySelector('h2').textContent = key.name;
+  keyContainer.querySelector('img').src = key.image;
+
+  // Limpia el contenedor de skins
+  skinsContainer.innerHTML = '';
+
+  // Recorre las skins contenidas en la caja
+  key.crates.forEach((crate) => {
+      const crateDiv = document.createElement('div');
+      crateDiv.classList.add('crate-item');
+
+      // Agrega la imagen de la skin
+      const crateImage = document.createElement('img');
+      crateImage.src = crate.image;
+      crateImage.alt = crate.name;
+
+      // Agrega un evento de clic a la imagen de la caja de llave
+      crateImage.addEventListener('click', () => {
+          // Llama a la función para mostrar las skins de la caja seleccionada
+          showSkinsInCrate(crate);
+      });
+
+      // Agrega la imagen de la caja al contenedor
+      crateDiv.appendChild(crateImage);
+
+      // Agrega la caja al contenedor de cajas de llaves
+      skinsContainer.appendChild(crateDiv);
+  });
+}
+
+// Llama a la función para cargar los datos de las cajas de llaves al cargar la página
+window.addEventListener('load', () => {
+  // Obtén la caja de llaves seleccionada (por ejemplo, la primera caja)
+  const selectedKey = keysData[0];
+  showSkinsInKey(selectedKey);
+});
